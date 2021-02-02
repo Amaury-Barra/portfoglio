@@ -1,0 +1,196 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/ 
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+
+}
+
+html {
+    font-size: 62.5%; /* to define 1rem = 10px car 100% = default (16px)*/ 
+}
+
+strong {
+    font-weight: 900;
+  }
+
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #777;
+    padding: 3rem;
+    box-sizing: border-box; /* On peut alors definir directement la taille de la box sans que le padding saoule */
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom ,
+        rgba(126, 213, 111, 0.75),
+        rgba(40, 180, 133, 0.75)) ,
+    url(../img/background-header.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
+}
+
+.header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.header__logo {
+    height: 6rem;
+}
+
+.header__text-box {
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color : #fff;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+
+}
+
+.heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 300;
+    letter-spacing: 3rem;
+    text-align: center;
+
+    animation: moveInLeft 1s ease-out;
+
+    /*animation-delay: 1s;*/
+}
+
+.heading-primary--sub {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1.55rem;
+    text-align: center;
+
+    animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn:link,
+.btn.visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover{
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+}
+
+.btn:active{
+    transform: translateY((-0.1rem));
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.2);
+}
+
+.btn--white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn--animated{
+    animation: moveInBottom 1s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn--white::after {
+    background-color: white;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.39) scaleY(1.6);
+    opacity: 0;
+} 
