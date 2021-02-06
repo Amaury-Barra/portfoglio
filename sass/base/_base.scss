@@ -1,0 +1,55 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+
+}
+
+html {
+    font-size: 62.5%; /* to define 1rem = 10px car 100% = default (16px)*/ 
+
+    @include respond(big-desktop) {
+        font-size: 75%;
+    }
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+
+	scroll-behavior: smooth;
+
+
+}
+
+strong {
+    font-weight: 900;
+}
+
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
+    box-sizing: border-box; /* On peut alors definir directement la taille de la box sans que le padding saoule */
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
+
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}

@@ -1,0 +1,35 @@
+.feature-box {
+
+    background-color: rgba($color-white,.8);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: .3rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black,.15);  
+    transition: all .2s;
+
+    @include respond(tab-port) {
+        padding: 2rem;
+    }
+
+    &__icon {
+        width: 5rem;
+        filter : invert(51%) sepia(0%) saturate(993%) hue-rotate(176deg) brightness(91%) contrast(80%);
+        display: inline-block;
+        margin-bottom: 2rem;
+        @include respond(tab-port) {
+            margin-bottom: 0rem;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-1.5rem);
+        transform: scale(1.05);
+        box-shadow: 0 2.5rem 4rem rgba($color-black,.2);
+    }
+
+    &__text {
+       font-size: inherit;
+    }
+}
+
