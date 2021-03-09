@@ -1306,7 +1306,7 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.75), rgba(40, 180, 133, 0.75)), url(../img/background-header.jpg);
+  background-image: linear-gradient(to right bottom, rgba(65, 131, 215, 0.75), rgba(65, 131, 215, 0.75)), url(../img/data_science_background_header.jpg);
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
